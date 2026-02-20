@@ -1,4 +1,4 @@
-class SwapArray {
+public class SwapArray {
 
     // method to swap two elements in array
     static void swap(int[] arr) {
