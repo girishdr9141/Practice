@@ -1,4 +1,12 @@
-import org.w3c.dom.ls.LSOutput;
+/* 🔹 Step-by-Step XOR
+Start = 0
+
+0 ^ 1 = 1     → 000 ^ 001 = 001
+1 ^ 2 = 3     → 001 ^ 010 = 011
+3 ^ 3 = 0     → 011 ^ 011 = 000
+0 ^ 2 = 2     → 000 ^ 010 = 010
+2 ^ 1 = 3     → 010 ^ 001 = 011 
+3 ^ 4 = 7     → 011 ^ 100 = 111*/
 
 class Twouniq{
     static int xorall(int[] arr){
@@ -37,7 +45,8 @@ class Twouniq{
 //2️⃣ Find rightmost set bit
 //
 //setbit = xor & -xor
-//
+
+//👉 xor & -xor always keeps only the last 1-bit
 //This bit is different in the two unique numbers
 //
 //3️⃣ Split numbers into two groups

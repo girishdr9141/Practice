@@ -1,0 +1,166 @@
+🔹 Storage Classes in C
+
+👉 They tell where a variable is stored, its lifetime, scope, and default value
+
+There are 4 main storage classes:
+
+1️⃣ auto (Automatic)
+
+Default storage for local variables
+
+Scope → inside block/function
+
+Lifetime → till function runs
+
+Default value → garbage
+
+void fun() {
+    auto int x = 10;
+}
+
+🧠 Remember: auto = normal local variable
+
+2️⃣ register
+
+Stored in CPU register (faster access)
+
+Scope → local
+
+Lifetime → function execution
+
+Default value → garbage
+
+void fun() {
+    register int x = 5;
+}
+
+🧠 Remember: register = faster local variable
+
+3️⃣ static
+
+Value remains between function calls
+
+Scope → local or global
+
+Lifetime → whole program
+
+Default value → 0
+
+void fun() {
+    static int count = 0;
+    count++;
+    printf("%d", count);
+}
+
+🧠 Remember: static = memory stays
+
+4️⃣ extern
+
+Used to access global variable from another file
+
+Scope → global
+
+Lifetime → whole program
+
+Default value → 0
+
+extern int x;
+
+🧠 Remember: extern = declared elsewhere
+
+Shift Alt A for multiline comment.
+
+🔹 1️⃣ XOR Cancellation Property
+
+👉 Same numbers cancel out
+
+a ^ a = 0
+a ^ 0 = a
+
+✔ Used in:
+
+finding unique element
+
+swapping numbers
+
+encryption tricks
+
+🔹 2️⃣ AND for Checking Bit
+n & 1  → checks if number is odd/even
+
+✔ Used in:
+
+odd/even check
+
+bit testing
+
+🔹 3️⃣ Right Shift = Divide by 2
+n >> 1  → n / 2
+
+✔ Used in:
+
+binary search logic
+
+fast math operations
+
+🔹 4️⃣ Left Shift = Multiply by 2
+n << 1  → n * 2
+
+✔ Used in:
+
+fast multiplication
+
+bit manipulation problems
+
+🔹 5️⃣ Remove Last Set Bit
+n & (n - 1)
+
+✔ Used in:
+
+counting set bits
+
+checking power of 2
+
+🔹 6️⃣ Get Rightmost Set Bit
+n & -n
+
+✔ Used in:
+
+two unique numbers problem
+
+bit partitioning
+
+🔹 7️⃣ Power of Two Check
+n > 0 && (n & (n-1)) == 0
+
+✔ Used in:
+
+memory allocation logic
+
+optimization problems
+
+🔹 8️⃣ Bit Masking
+
+👉 Turn ON bit
+
+n | (1 << i)
+
+👉 Turn OFF bit
+
+n & ~(1 << i)
+
+👉 Toggle bit
+
+n ^ (1 << i)
+
+✔ Used in:
+
+flags
+
+permissions
+
+DP with bitmask
+
+🔹 Super Easy Memory Trick
+
+👉 “XOR cancels, AND checks, SHIFT scales, MASK controls.”

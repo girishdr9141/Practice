@@ -6,7 +6,7 @@ class RecursionPrint {
         if (n == 0)      // base case
             return;
 
-        printN(n - 1);   // recursive call
+        printN(n - 1);   // recursive call , Position of the print statement decides whether it is 122345... or 54321...
         System.out.print(n + " ");
     }
 
@@ -17,4 +17,5 @@ class RecursionPrint {
 
         printN(n);
     }
+
 }

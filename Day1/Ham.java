@@ -21,3 +21,19 @@ public class Ham {
 
     }
 }
+
+// 🔹 Logic to Remember (Interview Friendly)
+
+// 👉 Think: “Check last bit → Count → Shift”
+
+// 1️⃣ Check last bit using
+// (n & 1) → tells if last bit is 1 or 0
+
+// 2️⃣ If it is 1, increase count
+
+// 3️⃣ Right shift number using n >> 1
+// → removes the last bit
+
+// 4️⃣ Repeat until number becomes 0
+
+// 5️⃣ Return count (that’s Hamming weight)
