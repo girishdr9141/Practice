@@ -1,0 +1,53 @@
+
+Strings Pool
+1. Compare ( == ): compares object created at certain address
+2. .equals : compares the content of the string
+3. String pool: a special memory area where string literals are stored. When a string literal is created, it is stored in the string pool. 
+If another string literal with the same content is created, it will reference the same memory location in the string pool, rather than creating a new object.
+
+intern() method: returns a canonical representation for the string object. It returns a reference to the string object from the string pool if it is already present, 
+otherwise it adds the string to the pool and returns a reference to it.
+
+coverts heap memory string to string pool memory. If the string is already present in the pool, it returns the reference to that string. If not, it adds the string to the pool and returns the reference to it.
+
+
+StringBuilder: StringBuilder is a mutable sequence of characters. It is used to create and manipulate strings that can be modified after they are created. It provides methods for appending, inserting, deleting, and modifying characters in the string. StringBuilder
+is more efficient than String when it comes to concatenation and modification of strings, as it does not create a new object every time a string is modified. Instead, it modifies the existing object in place.
+
+StringBuffer: StringBuffer is similar to StringBuilder, but it is thread-safe. It is used in multi-threaded environments where multiple threads may access and modify the same string. 
+StringBuffer provides synchronized methods for appending, inserting, deleting, and modifying characters in the string, ensuring that only one thread can access the string at a time. However, StringBuffer is less efficient than StringBuilder due to the overhead of synchronization.
+
+String builder is faster than StringBuffer because it is not synchronized, while StringBuffer is thread-safe but slower due to synchronization overhead. 
+If you are working in a single-threaded environment, it is recommended to use StringBuilder for better performance. However, if you are working in a multi-threaded environment where multiple threads may access and modify the same string, it is recommended to use StringBuffer for thread safety.
+
+
+MultiThreading: Multi-threading is a programming technique that allows multiple threads to run concurrently within a single process. Each thread represents a separate path of execution, allowing for tasks to be performed simultaneously.
+start method: used to start a thread. When the start() method is called, the thread is moved from the new state to the runnable state, and the run() method is executed in a separate thread of execution.
+run method: contains the code that defines the behavior of the thread. It is called when the thread is started using the start() method. 
+The run() method can be overridden to define the specific behavior of the thread. When the run() method is executed, it runs in a separate thread of execution, allowing for concurrent processing.
+
+Join: The join() method is used to wait for a thread to complete its execution. When the join() method is called on a thread, the calling thread will be blocked until the thread on which join() was called has finished executing.
+This is useful when you want to ensure that a thread has completed its task before proceeding with the next 
+
+throw: The throw keyword is used to explicitly throw an exception in Java. It is followed by an instance of the Throwable class or its subclasses. When a throw statement is executed, the specified exception is thrown and can be caught by a corresponding catch block.
+
+
+INheritance, Association, Aggregation, Composition,
+                    Realtionship       Type            Dependency
+                    --------------     -------------   ----------------
+Inheritance          IS-A              Strong         Parent-child relationship where the child class inherits properties and behaviors from the parent class.
+Association          uses-A            Weak           A relationship where one class has a reference to another class, Independednt of the lifecycle of the other class.
+Aggregation          has-A             Weak           A relationship where one class contains a reference to another class, but the contained class can exist independently of the container class.
+Composition          contains-A        Strong         A relationship where one class contains a reference to another class, and the contained class cannot exist independently of the container class. If the container class is destroyed, the contained class is also destroyed.
+
+
+IS-A: Inheritance is a fundamental object-oriented programming concept where a new class (called a child or subclass) is created
+uses-A: Association is a relationship between two classes where one class uses or interacts with another class. It represents a "has-a" relationship, where one class has a reference to another class. The lifecycle of the associated class is independent of the class that uses it.
+
+
+Final: The final keyword in Java is used to declare constants, prevent method overriding, and prevent inheritance. When a variable is declared as final, its value cannot be changed once it is assigned. 
+When a method is declared as final, it cannot be overridden by subclasses. When a class is declared as final, it cannot be subclassed. The final keyword is used to ensure that certain aspects of a class or method cannot be modified, providing a level of security and stability in the code.
+
+
+static final: A static final variable is a constant that belongs to the class rather than an instance of the class. It is declared using the static and final keywords.
+
