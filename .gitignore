@@ -1,2 +1,14 @@
 # Compiled Java bytecode
 *.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Java build outputs
+out/
+bin/
+target/
+
+# JVM crash logs
+hs_err_pid*
