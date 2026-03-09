@@ -1,5 +1,7 @@
 import java.util.*;
-public class LinearSearch {
+public class LinearSearch 
+//can be performed on both sorted and unsorted arrays
+{
     public static int linearSearch(int[] arr, int target) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == target) {
